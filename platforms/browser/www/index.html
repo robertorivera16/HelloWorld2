@@ -36,40 +36,25 @@ under the License.
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 
 </head>
 <body>
-  <div data-role="page" id="pageone">
-    <div data-role="header">
-      <p id="h_title">Header</p>
-    </div>
-    <div data-role="main" class="ui-content">
-      <h3>This is Page One!</h3>
-      <a href="#pagetwo" id="myButton">Go to Page Two!</a>
-    </div>
-    <div data-role="footer">
-      <h1>Footer</h1>
-    </div>
-  </div>
-
-  <div data-role="page" id="pagetwo">
-    <div data-role="header">
-      <p id="h_title">Header</p>
-    </div>
-    <div data-role="main" class="ui-content">
-      <h3>This is Page Two!</h3>
-      <a href="#pageone" id="myButton">Go to Page One!</a>
-    </div>
-    <div data-role="footer">
-      <h1>Footer</h1>
-    </div>
-  </div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active" id="home"><a href="index.html">Home</a></li>
+    <li role="presentation" id="profile"><a href="profile.html">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul>
+  <h1>HOME</h1>
 </body>
 </html>
