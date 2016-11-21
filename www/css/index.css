@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+.headerTitle{
+  text-align: center;
+}
+
 .subtext, .subtext p{
   color: white;
   text-decoration: none;
@@ -16,6 +20,13 @@
 
 .ui-page{
   background-color: #00b359;
+}
+
+.ui-header{
+  background-color: #135613;
+  color: white;
+  font-weight: normal;
+  font-size: 17px;
 }
 
 #main-page-icon{
