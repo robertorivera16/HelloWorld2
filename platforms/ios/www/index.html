@@ -36,25 +36,59 @@ under the License.
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 
 </head>
 <body>
-  <ul class="nav nav-tabs">
-    <li role="presentation" class="active" id="home"><a href="index.html">Home</a></li>
-    <li role="presentation" id="profile"><a href="profile.html">Profile</a></li>
-    <li role="presentation"><a href="#">Messages</a></li>
-  </ul>
-  <h1>HOME</h1>
-</body>
-</html>
+
+  <div data-role="page" id="homepage">
+    <div data-role="header">
+      <p class="headerTitle">RUM Test App</p>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-b">
+        <div class="ui-block-a">
+          <a class="subtext" href="#helloWorldPage">
+            <img id="main-page-icon" src="https://maxcdn.icons8.com/Color/PNG/96/Hands/hand_spock-96.png" title="Hello World" width="96">
+            <p>Hello World<p>
+            </a>
+          </div>
+          <div class="ui-block-b">
+            <a class="subtext" href="#inputPage">
+              <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/Computer_Hardware/keyboard-96.png" title="Keyboard" width="96">
+              <p>
+                Input
+              </p>
+            </a>
+          </div>
+          <div class="ui-block-b">
+          </div>
+          <div class="ui-block-c">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="page" id="helloWorldPage">
+      <div data-role="header">
+        <h1>Hello World Page</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+      </div>
+    </div>
+
+
+
+
+
+  </body>
+  </html>
