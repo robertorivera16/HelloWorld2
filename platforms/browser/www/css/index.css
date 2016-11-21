@@ -1,13 +1,24 @@
 *{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ui-block-a, .ui-block-b, .ui-block-c{
   text-align: center;
 }
 
-.headerTitle{
+.header-title, .header-title p{
   text-align: center;
+  font-family: 'Bungee Inline', cursive;
+  font-weight: normal;
+  font-size: 25px;
+  margin-bottom: 3px;
+  margin-top: auto;
+}
+
+#header-icon{
+  width: 100px;
+  margin-top: 4px;
+  margin-bottom: 0px;
 }
 
 .subtext, .subtext p{
@@ -16,6 +27,10 @@
   font-weight: normal;
   text-shadow: none;
   font-size: 17px;
+}
+
+#helloworld-text{
+  font-size: 8px;
 }
 
 .ui-page{

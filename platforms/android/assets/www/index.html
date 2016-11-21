@@ -37,8 +37,7 @@ under the License.
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
@@ -47,16 +46,19 @@ under the License.
 
 </head>
 <body>
-
+  <!--HEADER-->
   <div data-role="page" id="homepage">
-    <div data-role="header">
-      <p class="headerTitle">RUM Test App</p>
+    <div class="header-title"data-role="header">
+
+      <img id="header-icon" src="img/paw_logo.png" />
+      <p>RUM Test App</p>
     </div>
 
+    <!--MAIN CONTENT-->
     <div data-role="main" class="ui-content">
       <div class="ui-grid-b">
         <div class="ui-block-a">
-          <a class="subtext" href="#helloWorldPage">
+          <a class="subtext" href="#helloWorldPage" data-transition="slidefade">
             <img id="main-page-icon" src="https://maxcdn.icons8.com/Color/PNG/96/Hands/hand_spock-96.png" title="Hello World" width="96">
             <p>Hello World<p>
             </a>
@@ -64,9 +66,7 @@ under the License.
           <div class="ui-block-b">
             <a class="subtext" href="#inputPage">
               <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/Computer_Hardware/keyboard-96.png" title="Keyboard" width="96">
-              <p>
-                Input
-              </p>
+              <p>Input</p>
             </a>
           </div>
           <div class="ui-block-b">
@@ -83,6 +83,8 @@ under the License.
       </div>
 
       <div data-role="main" class="ui-content">
+        <button>Say hi louder</button>
+        <p id="helloworld-text">Hello World!</p>
       </div>
     </div>
 
