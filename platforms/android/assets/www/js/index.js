@@ -1,8 +1,15 @@
 $(document).ready(function(){
-    $("button").click(function(){
-        $("#helloworld-text").css({
-          "text-align":"center",
-          "color": "white",
-          "font-size": "250%"});
+    $(".say-hi-btn").click(function(){
+        var hello = $(".helloworld-text");
+        hello.css({
+          "color":"white",
+          "text-shadow": "2px 2px 40px black"
+        });
+
+        hello.animate({
+          "font-size": "150px"
+        }).fadeOut("slow").fadeIn("slow");
+
+
     });
 });
