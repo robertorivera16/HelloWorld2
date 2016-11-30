@@ -12,4 +12,17 @@ $(document).ready(function(){
 
 
     });
+
+    $(".back-btn").click(function(){
+      var hello = $(".helloworld-text");
+      hello.css({
+        "color":"black",
+        "text-shadow": "1px 1px 10px white"
+      });
+      hello.animate({
+        "font-size": "8px"
+      });
+    });
+
+
 });
