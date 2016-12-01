@@ -51,16 +51,18 @@ $(document).ready(function(){
   $("#showData-btn").click(function(){
     localforage.length().then(function(length) {
       // Loop over each of the items.
-      for (var i = 0; i < length; i++) {
-        // Get the key.
-        localforage.key(i).then(function(key) {
-          // Retrieve the data.
+      if(length != 0){
+        for (var i = 0; i < length; i++) {
+          // Get the key.
+          localforage.key(i).then(function(key) {
+            // Retrieve the data.
 
-          localforage.getItem(key).then(function(value){
-            alert(value);
+            localforage.getItem(key).then(function(value){
+              alert(value);
+            });
           });
-        });
-      }
+        }
+      }else alert("No Data to show.");
     });
   });
 
