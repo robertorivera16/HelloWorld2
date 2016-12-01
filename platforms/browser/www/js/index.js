@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
 
     hello.animate({
-      "font-size": "150px"
+      "font-size": "120px"
     }).fadeOut("slow").fadeIn("slow");
 
 
@@ -31,14 +31,17 @@ $(document).ready(function(){
       var textInputVal = document.getElementById('number').value;
 
       var key = length.toString();
+
+      //For testing purposes
       console.log(typeof key);
       console.log(key);
 
 
-
-      localforage.setItem(key, textInputVal).then(function(value1){
-        alert("Value Stored: " + value1);
-      });
+      if(textInputVal != ""){
+        localforage.setItem(key, textInputVal).then(function(value1){
+          alert("Value Stored: " + value1);
+        });
+      }else alert("Empty Input. Write a number");
     });
   });
 

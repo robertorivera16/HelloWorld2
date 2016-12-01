@@ -2,7 +2,8 @@
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>RUMTestApp</name>
     <description>
-        A sample Apache Cordova application consisting of modules to test certain behaviors.
+      An app consisting of different modules/pages to test behaviors such as
+      text presentation and offline local storage.
     </description>
     <author email="roberto.rivera16@upr.edu" href="https://github.com/robertorivera16/HelloWorld2">
         Roberto C. Rivera Reyes
