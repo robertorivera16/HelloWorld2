@@ -69,7 +69,7 @@ under the License.
             </a>
           </div>
           <div class="ui-block-b">
-            <a class="subtext" href="#inputPage">
+            <a class="subtext" href="#inputPage" data-transition="slidefade">
               <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/Computer_Hardware/keyboard-96.png" title="Keyboard" width="96">
               <p>Input</p>
             </a>
@@ -128,13 +128,18 @@ under the License.
       </div>
 
       <div data-role="main" class="ui-content">
-        <form action="index.html" method="post">
+
           <div class="ui-field-contain">
-            <label for="number">Enter number to save:</label>
+            <label class="subtext" for="number">Enter number:</label>
               <input id="number" type="number" value="">
-              <input type="submit" data-inline="true" value="Submit">
+              <div style="text-align: center">
+                <button id="submit-btn" data-inline="true">Save Number</button>
+                <button id="showData-btn" data-inline="true">Show Data</button>
+                <button id="clear-btn" data-inline="true">Clear</button>
+              </div>
+
           </div>
-        </form>
+
 
 
 

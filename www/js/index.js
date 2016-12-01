@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   $(".say-hi-btn").click(function(){
     var hello = $(".helloworld-text");
@@ -25,10 +27,17 @@ $(document).ready(function(){
   });
 
   $("#submit-btn").click(function(){
-    localforage.length(function(length){
+    localforage.length().then(function(length){
       var textInputVal = document.getElementById('number').value;
-      localforage.setItem(length, textInputVal).then(function(value){
-        alert("Value Stored: " + value);
+
+      var key = length.toString();
+      console.log(typeof key);
+      console.log(key);
+
+
+
+      localforage.setItem(key, textInputVal).then(function(value1){
+        alert("Value Stored: " + value1);
       });
     });
   });
@@ -40,14 +49,15 @@ $(document).ready(function(){
   });
 
   $("#showData-btn").click(function(){
-    localforage.length(function(length) {
+    localforage.length().then(function(length) {
       // Loop over each of the items.
       for (var i = 0; i < length; i++) {
         // Get the key.
-        localforage.key(i, function(key) {
+        localforage.key(i).then(function(key) {
           // Retrieve the data.
+
           localforage.getItem(key).then(function(value){
-            alert("Value " + i + ": " + value);
+            alert(value);
           });
         });
       }
