@@ -35,15 +35,19 @@ under the License.
 <title>Hello World</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
-<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" href="css/rumTheme.min.css" />
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/index.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/localforage.js"></script>
 
 </head>
 <body>
@@ -82,10 +86,14 @@ under the License.
       <div data-role="header">
         <div data-role="navbar" data-iconpos="left">
           <ul>
-            <li><a href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
-            Back</a>
+            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
+              Back</a>
             </li>
-            <li><a href="#" class="ui-btn-active">Hello World Page!</a></li>
+            <li>
+              <div>
+                Hello World Page
+              </div>
+            </li>
             <li></li>
 
           </ul>
@@ -93,8 +101,43 @@ under the License.
       </div>
 
       <div data-role="main" class="ui-content">
-        <button class="say-hi-btn">Say hi louder</button>
+        <div style="text-align: center">
+          <div class="say-hi-btn">Say Hi Louder?</div>
+        </div>
+
         <div class="helloworld-text"><p>Hello World!</p></div>
+      </div>
+    </div>
+
+    <div data-role="page" id="inputPage">
+      <div data-role="header">
+        <div data-role="navbar" data-iconpos="left">
+          <ul>
+            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
+              Back</a>
+            </li>
+            <li>
+              <div>
+                Input Page
+              </div>
+            </li>
+            <li></li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <form action="index.html" method="post">
+          <div class="ui-field-contain">
+            <label for="number">Enter number to save:</label>
+              <input id="number" type="number" value="">
+              <input type="submit" data-inline="true" value="Submit">
+          </div>
+        </form>
+
+
+
       </div>
     </div>
 

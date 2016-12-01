@@ -47,6 +47,7 @@ under the License.
 
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/localforage.js"></script>
 
 </head>
 <body>
@@ -68,7 +69,7 @@ under the License.
             </a>
           </div>
           <div class="ui-block-b">
-            <a class="subtext" href="#inputPage">
+            <a class="subtext" href="#inputPage" data-transition="slidefade">
               <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/Computer_Hardware/keyboard-96.png" title="Keyboard" width="96">
               <p>Input</p>
             </a>
@@ -105,6 +106,43 @@ under the License.
         </div>
 
         <div class="helloworld-text"><p>Hello World!</p></div>
+      </div>
+    </div>
+
+    <div data-role="page" id="inputPage">
+      <div data-role="header">
+        <div data-role="navbar" data-iconpos="left">
+          <ul>
+            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
+              Back</a>
+            </li>
+            <li>
+              <div>
+                Input Page
+              </div>
+            </li>
+            <li></li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div data-role="main" class="ui-content">
+
+          <div class="ui-field-contain">
+            <label class="subtext" for="number">Enter number:</label>
+              <input id="number" type="number" value="">
+              <div style="text-align: center">
+                <button id="submit-btn" data-inline="true">Submit</button>
+                <button id="showData-btn" data-inline="true">Show Data</button>
+                <button id="clear-btn" data-inline="true">Clear</button>
+              </div>
+
+          </div>
+
+
+
+
       </div>
     </div>
 
