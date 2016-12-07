@@ -59,45 +59,49 @@ under the License.
       <p>RUM Test App</p>
     </div>
 
-    <!--MAIN CONTENT-->
+    <!--HOME PAGE-->
     <div data-role="main" class="ui-content">
       <div class="ui-grid-b">
         <div class="ui-block-a">
-          <a class="subtext" href="#helloWorldPage" data-transition="slidefade">
+          <a class="subtext" href="#helloWorldPage" data-transition="fade">
             <img id="main-page-icon" src="https://maxcdn.icons8.com/Color/PNG/96/Hands/hand_spock-96.png" title="Hello World" width="96">
             <p>Hello World<p>
             </a>
           </div>
           <div class="ui-block-b">
-            <a class="subtext" href="#inputPage" data-transition="slidefade">
+            <a class="subtext" href="#localInputPage" data-transition="fade">
               <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/Computer_Hardware/keyboard-96.png" title="Keyboard" width="96">
-              <p>Input</p>
+              <p>Local Input</p>
             </a>
           </div>
-          <div class="ui-block-b">
-          </div>
           <div class="ui-block-c">
+            <a class="subtext" href="#serverForm" data-transition="fade">
+              <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/User_Interface/form-96.png" title="Form" width="96" title="Keyboard" width="96">
+              <p>Server Form</p>
+            </a>
+          </div>
+          <div class="ui-block-d">
           </div>
         </div>
       </div>
     </div>
+    
+    <!--Server Form Page-->
+    <div data-role="page" id="serverForm">
+      <div data-role="header">
+        <a href="#homepage" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1 style="font-family: Arial">Server Form Page</h1>
+      </div>
+      <div data-role="main" class="ui-content">
 
+      </div>
+    </div>
+
+    <!--Hello World Page-->
     <div data-role="page" id="helloWorldPage">
       <div data-role="header">
-        <div data-role="navbar" data-iconpos="left">
-          <ul>
-            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
-              Back</a>
-            </li>
-            <li>
-              <div>
-                Hello World Page
-              </div>
-            </li>
-            <li></li>
-
-          </ul>
-        </div>
+        <a href="#homepage" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1 style="font-family: Arial">Hello World Page</h1>
       </div>
 
       <div data-role="main" class="ui-content">
@@ -109,36 +113,29 @@ under the License.
       </div>
     </div>
 
-    <div data-role="page" id="inputPage">
+    <!--Local Storage Input Page-->
+    <div data-role="page" id="localInputPage">
       <div data-role="header">
-        <div data-role="navbar" data-iconpos="left">
-          <ul>
-            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
-              Back</a>
-            </li>
-            <li>
-              <div>
-                Input Page
-              </div>
-            </li>
-            <li></li>
-
-          </ul>
-        </div>
+        <a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1 style="font-family: Arial">Local Input Page</h1>
       </div>
 
       <div data-role="main" class="ui-content">
 
-          <div class="ui-field-contain">
-            <label class="subtext" for="number">Enter number:</label>
-              <input id="number" type="number" value="">
-              <div style="text-align: center">
-                <button id="submit-btn" data-inline="true">Save Number</button>
-                <button id="showData-btn" data-inline="true">Show Data</button>
-                <button id="clear-btn" data-inline="true">Clear</button>
-              </div>
+        <div class="ui-field-contain">
 
+          <div data-role="fieldcontain">
+            <label class="subtext" for="number">Enter number:</label>
+            <input id="number" type="number" value="">
           </div>
+
+          <div style="text-align: center">
+            <button id="submit-btn" data-inline="true">Save Number</button>
+            <button id="showData-btn" data-inline="true">Show Data</button>
+            <button id="clear-btn" data-inline="true">Clear</button>
+          </div>
+
+        </div>
 
 
 
