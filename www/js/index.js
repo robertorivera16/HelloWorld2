@@ -1,6 +1,9 @@
-
-
 $(document).ready(function(){
+  var nA = localforage.createInstance({
+    name: "number array"
+  });
+
+
   $(".say-hi-btn").click(function(){
     var hello = $(".helloworld-text");
     hello.css({
@@ -26,8 +29,8 @@ $(document).ready(function(){
     });
   });
 
-  $("#submit-btn").click(function(){
-    localforage.length().then(function(length){
+  $("#saveNum-btn").click(function(){
+    nA.length().then(function(length){
       var textInputVal = document.getElementById('number').value;
 
       var key = length.toString();
@@ -38,7 +41,7 @@ $(document).ready(function(){
 
 
       if(textInputVal != ""){
-        localforage.setItem(key, textInputVal).then(function(value1){
+        nA.setItem(key, textInputVal).then(function(value1){
           alert("Value Stored: " + value1);
         });
       }else alert("Empty Input. Write a number");
@@ -46,26 +49,39 @@ $(document).ready(function(){
   });
 
   $("#clear-btn").click(function(){
-    localforage.clear().then(function(){
+    nA.clear().then(function(){
       alert("Data Cleared");
     });
   });
 
   $("#showData-btn").click(function(){
-    localforage.length().then(function(length) {
+    nA.length().then(function(length) {
       // Loop over each of the items.
       if(length != 0){
         for (var i = 0; i < length; i++) {
           // Get the key.
-          localforage.key(i).then(function(key) {
+          nA.key(i).then(function(key) {
             // Retrieve the data.
 
-            localforage.getItem(key).then(function(value){
+            nA.getItem(key).then(function(value){
               alert(value);
             });
           });
         }
       }else alert("No Data to show.");
+    });
+  });
+
+  $("#displayData-btn").click(function(){
+    var root = 'https://jsonplaceholder.typicode.com';
+
+    $.ajax({
+      url: root + '/posts/1',
+      method: 'GET'
+    }).then(function(data) {
+      $.each(data, function(key, value){
+        alert(key + ":\n" + value);
+      });
     });
   });
 
