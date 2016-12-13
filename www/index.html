@@ -60,7 +60,7 @@ under the License.
     </div>
 
     <!--HOME PAGE-->
-    <div data-role="main" class="ui-content">
+    <div data-role="main" class="ui-content" id="homePage">
       <div class="ui-grid-b">
         <div class="ui-block-a">
           <a class="subtext" href="#helloWorldPage" data-transition="fade">
@@ -86,6 +86,7 @@ under the License.
       </div>
     </div>
 
+
     <!--Phone Directory Page-->
     <div data-role="page" id="phoneDirectoryPage">
       <div data-role="header">
@@ -93,7 +94,10 @@ under the License.
         <h1 style="font-family: Arial">Phone Directory</h1>
       </div>
       <div data-role="main" class="ui-content">
-        <button id="displayData-btn" data-inline="true">Display Data</button>
+        <button id="displayData-btn" class="ui-btn">Display Data</button>
+        <ul data-role="listview" data-autodividers="true" class="contact-ls">
+
+        </ul>
       </div>
     </div>
 
@@ -134,12 +138,7 @@ under the License.
             <button id="showData-btn" data-inline="true">Show Data</button>
             <button id="clear-btn" data-inline="true">Clear</button>
           </div>
-
         </div>
-
-
-
-
       </div>
     </div>
 

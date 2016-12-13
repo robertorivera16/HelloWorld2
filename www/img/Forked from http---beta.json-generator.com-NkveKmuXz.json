@@ -1,0 +1,36 @@
+{
+  "contacts": [
+    {
+      "phone": "787-903-8988",
+      "name": "Steven Madden"
+    },
+    {
+      "phone": "787-903-7888",
+      "name": "Robert Escalera"
+    },
+    {
+      "phone": "787-337-3734",
+      "name": "Kevin Tsuyihara"
+    },
+    {
+      "phone": "787-647-8393",
+      "name": "Louis White"
+    },
+    {
+      "phone": "787-777-2323",
+      "name": "Maria Cervantes"
+    },
+    {
+      "phone": "787-333-4444",
+      "name": "Alvin P."
+    },
+    {
+      "phone": "787-343-8922",
+      "name": "Lusamine Black"
+    },
+    {
+      "phone": "787-252-7382",
+      "name": "Lilly Rose"
+    }
+  ]
+}

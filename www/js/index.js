@@ -1,6 +1,11 @@
+
 $(document).ready(function(){
   var nA = localforage.createInstance({
     name: "number array"
+  });
+
+  var contactData = localforage.createInstance({
+    name: "Contact Data"
   });
 
 
@@ -73,14 +78,16 @@ $(document).ready(function(){
   });
 
   $("#displayData-btn").click(function(){
-    var root = 'https://jsonplaceholder.typicode.com';
-
+    var root = 'http://beta.json-generator.com/api/json/get/41Bp9XdmM';
+    contactData.clear();
     $.ajax({
-      url: root + '/posts/1',
+      url: root,
       method: 'GET'
     }).then(function(data) {
       $.each(data, function(key, value){
-        alert(key + ":\n" + value);
+        nA.setItem(key, value).then(function(value1){
+          alert("Value Stored: " + value1);
+        });
       });
     });
   });
