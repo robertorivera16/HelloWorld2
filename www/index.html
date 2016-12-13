@@ -35,16 +35,17 @@ under the License.
 <title>Hello World</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <link rel="stylesheet" href="css/rumTheme.min.css" />
-
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+<script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/localforage.js"></script>
@@ -75,7 +76,7 @@ under the License.
             </a>
           </div>
           <div class="ui-block-c">
-            <a class="subtext" href="#phoneDirectoryPage" data-transition="fade">
+            <a id="directory-btn" class="subtext" href="#phoneDirectoryPage" data-transition="fade">
               <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/User_Interface/form-96.png" title="Form" width="96" title="Keyboard" width="96">
               <p>Directory</p>
             </a>

@@ -77,19 +77,24 @@ $(document).ready(function(){
     });
   });
 
-  $("#displayData-btn").click(function(){
-    var root = 'http://beta.json-generator.com/api/json/get/41Bp9XdmM';
-    contactData.clear();
-    $.ajax({
-      url: root,
-      method: 'GET'
-    }).then(function(data) {
-      $.each(data, function(key, value){
-        nA.setItem(key, value).then(function(value1){
-          alert("Value Stored: " + value1);
+  $("#directory-btn").click(function(){
+    var JSONService = 'http://beta.json-generator.com/api/json/get/41Bp9XdmM';
+    contactData.length().then(function(length){
+      if (length === 0) {
+        $.getJSON(JSONService, function(data) {
+          alert("success");
+        })
+
+        .done(function( data ) {
+          $.each( data.contacts, function( i, item ) {
+            contactData.setItem(item.name, item.phone);
+          });
         });
-      });
+      }else{
+        alert("Data Fetched");
+      }
     });
+
   });
 
 
