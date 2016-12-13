@@ -77,7 +77,19 @@
   background: rgb(66, 184, 221);
 }
 
+#displayContactInfo-btn{
+  color: white;
+  text-shadow: none;
+  background-color: #275104;
+}
 
+.ui-content{
+  text-align: center;
+}
+
+#info-background li{
+  background-color: white;
+}
 
 .ui-page{
   background-color: #00b359;

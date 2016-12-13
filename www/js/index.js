@@ -8,6 +8,8 @@ $(document).ready(function(){
     name: "Contact Data"
   });
 
+  var dataAdded = false;
+
 
   $(".say-hi-btn").click(function(){
     var hello = $(".helloworld-text");
@@ -78,11 +80,12 @@ $(document).ready(function(){
   });
 
   $("#directory-btn").click(function(){
-    var JSONService = 'http://beta.json-generator.com/api/json/get/41Bp9XdmM';
+    var JSONService = 'http://beta.json-generator.com/api/json/get/EJz5aVtQM';
+
     contactData.length().then(function(length){
       if (length === 0) {
         $.getJSON(JSONService, function(data) {
-          alert("success");
+          alert("Contact Information Recieved");
         })
 
         .done(function( data ) {
@@ -95,6 +98,29 @@ $(document).ready(function(){
       }
     });
 
+  });
+
+  $("#displayContactInfo-btn").click(function(){
+    if (!dataAdded) {
+
+
+      contactData.length().then(function(length) {
+        // Loop over each of the items.
+        if(length != 0){
+          for (var i = 0; i < length; i++) {
+            // Get the key.
+            contactData.key(i).then(function(key) {
+              // Retrieve the data.
+              contactData.getItem(key).then(function(value){
+                $( "<li><div class='collapsible-header'>"+ key +"</div><div class='collapsible-body'><p>"+ value +"</p></div></li>" ).insertBefore( ".list-e" );
+              });
+
+            });
+          }
+          dataAdded = true;
+        }else alert("No Data to show.");
+      });
+    }else alert("Data Already added.");
   });
 
 
