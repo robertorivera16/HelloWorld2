@@ -35,16 +35,17 @@ under the License.
 <title>Hello World</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <link rel="stylesheet" href="css/rumTheme.min.css" />
-
+<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+<script type="text/javascript" src="js/materialize.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/localforage.js"></script>
@@ -59,45 +60,59 @@ under the License.
       <p>RUM Test App</p>
     </div>
 
-    <!--MAIN CONTENT-->
-    <div data-role="main" class="ui-content">
+    <!--HOME PAGE-->
+    <div data-role="main" class="ui-content" id="homePage">
       <div class="ui-grid-b">
         <div class="ui-block-a">
-          <a class="subtext" href="#helloWorldPage" data-transition="slidefade">
+          <a class="subtext" href="#helloWorldPage" data-transition="fade">
             <img id="main-page-icon" src="https://maxcdn.icons8.com/Color/PNG/96/Hands/hand_spock-96.png" title="Hello World" width="96">
             <p>Hello World<p>
             </a>
           </div>
           <div class="ui-block-b">
-            <a class="subtext" href="#inputPage" data-transition="slidefade">
+            <a class="subtext" href="#localInputPage" data-transition="fade">
               <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/Computer_Hardware/keyboard-96.png" title="Keyboard" width="96">
-              <p>Input</p>
+              <p>Local Input</p>
             </a>
           </div>
-          <div class="ui-block-b">
-          </div>
           <div class="ui-block-c">
+            <a id="directory-btn" class="subtext" href="#phoneDirectoryPage" data-transition="fade">
+              <img id="main-page-icon"src="https://maxcdn.icons8.com/Color/PNG/96/User_Interface/form-96.png" title="Form" width="96" title="Keyboard" width="96">
+              <p>Directory</p>
+            </a>
+          </div>
+          <div class="ui-block-d">
           </div>
         </div>
       </div>
     </div>
 
+
+    <!--Phone Directory Page-->
+    <div data-role="page" id="phoneDirectoryPage">
+      <div data-role="header">
+        <a href="#homepage" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1 style="font-family: Arial">Phone Directory</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <a id="displayContactInfo-btn" class="waves-effect waves-light btn">Display Contact Info</a>
+
+        <ul id="info-background" class="collapsible popout" data-collapsible="accordion">
+          <div class="list-e">
+          </div>
+
+        </ul>
+
+
+
+      </div>
+    </div>
+
+    <!--Hello World Page-->
     <div data-role="page" id="helloWorldPage">
       <div data-role="header">
-        <div data-role="navbar" data-iconpos="left">
-          <ul>
-            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
-              Back</a>
-            </li>
-            <li>
-              <div>
-                Hello World Page
-              </div>
-            </li>
-            <li></li>
-
-          </ul>
-        </div>
+        <a href="#homepage" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1 style="font-family: Arial">Hello World Page</h1>
       </div>
 
       <div data-role="main" class="ui-content">
@@ -109,40 +124,28 @@ under the License.
       </div>
     </div>
 
-    <div data-role="page" id="inputPage">
+    <!--Local Storage Input Page-->
+    <div data-role="page" id="localInputPage">
       <div data-role="header">
-        <div data-role="navbar" data-iconpos="left">
-          <ul>
-            <li><a class="back-btn" href="#homepage" data-icon="arrow-l" data-transition="slide" data-direction="reverse">
-              Back</a>
-            </li>
-            <li>
-              <div>
-                Input Page
-              </div>
-            </li>
-            <li></li>
-
-          </ul>
-        </div>
+        <a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <h1 style="font-family: Arial">Local Input Page</h1>
       </div>
 
       <div data-role="main" class="ui-content">
 
-          <div class="ui-field-contain">
-            <label class="subtext" for="number">Enter number:</label>
-              <input id="number" type="number" value="">
-              <div style="text-align: center">
-                <button id="submit-btn" data-inline="true">Save Number</button>
-                <button id="showData-btn" data-inline="true">Show Data</button>
-                <button id="clear-btn" data-inline="true">Clear</button>
-              </div>
+        <div class="ui-field-contain">
 
+          <div data-role="fieldcontain">
+            <label class="subtext" for="number">Enter number:</label>
+            <input id="number" type="number" value="">
           </div>
 
-
-
-
+          <div style="text-align: center">
+            <button id="saveNum-btn" data-inline="true">Save Number</button>
+            <button id="showData-btn" data-inline="true">Show Data</button>
+            <button id="clear-btn" data-inline="true">Clear</button>
+          </div>
+        </div>
       </div>
     </div>
 
