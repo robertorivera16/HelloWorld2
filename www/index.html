@@ -33,34 +33,44 @@ under the License.
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
 <title>Hello World</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<link rel="stylesheet" href="css/rumTheme.min.css" />
+<!--Materialize  Framework CSS-->
+<!--This framework is used to test its features in the Directory module-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+<!--JQuery Mobile Theme CSS-->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="css/rumTheme.min.css" />
+
 <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
+
+<!--Cordova CSS, Application CSS-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!--Materialize Javascript-->
 <script type="text/javascript" src="js/materialize.js"></script>
+<!-- Application Javascript-->
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+
+<!--LocalForage JavaScript, used for local data storage (Offline Storage)-->
 <script type="text/javascript" src="js/localforage.js"></script>
 
 </head>
 <body>
-  <!--HEADER-->
+  <!--HOME PAGE-->
   <div data-role="page" id="homepage">
     <div class="header-title"data-role="header">
-
       <img id="header-icon" src="img/paw_logo.png" />
       <p>RUM Test App</p>
     </div>
 
-    <!--HOME PAGE-->
+    <!--HOME PAGE BODY-->
     <div data-role="main" class="ui-content" id="homePage">
       <div class="ui-grid-b">
         <div class="ui-block-a">
@@ -111,7 +121,7 @@ under the License.
     <!--Hello World Page-->
     <div data-role="page" id="helloWorldPage">
       <div data-role="header">
-        <a href="#homepage" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+        <a href="#homepage" class="ui-btn ui-icon-home ui-btn-icon-left hello-reset-btn">Home</a>
         <h1 style="font-family: Arial">Hello World Page</h1>
       </div>
 

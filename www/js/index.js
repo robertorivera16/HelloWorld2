@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+  //Two Local Forage instances, one for the Local Input Page -- nA
+  //the other for the Phone Directory Page -- contactData
   var nA = localforage.createInstance({
     name: "number array"
   });
@@ -8,11 +10,19 @@ $(document).ready(function(){
     name: "Contact Data"
   });
 
+  //Boolean variable to determine if the Contact Data (Name & Phone-Number), that is retrieved from an
+  //internet page, is added or not. Used in $("#displayContactInfo-btn").click(...)
   var dataAdded = false;
 
+  //$(...) ---> JQuery
 
+  //When the button with class say-hi-btn is pressed
+  //the text with class helloworld-text is modified.
+  //Certain attributes like color and text-shadow is added to it.
+  //Then the JQuery function animate is used.
   $(".say-hi-btn").click(function(){
     var hello = $(".helloworld-text");
+
     hello.css({
       "color":"white",
       "text-shadow": "2px 2px 40px black"
@@ -25,7 +35,8 @@ $(document).ready(function(){
 
   });
 
-  $(".back-btn").click(function(){
+  //Returns the Hello World text to its initial style.
+  $(".hello-reset-btn").click(function(){
     var hello = $(".helloworld-text");
     hello.css({
       "color":"black",
@@ -36,15 +47,12 @@ $(document).ready(function(){
     });
   });
 
+
   $("#saveNum-btn").click(function(){
     nA.length().then(function(length){
       var textInputVal = document.getElementById('number').value;
 
       var key = length.toString();
-
-      //For testing purposes
-      console.log(typeof key);
-      console.log(key);
 
 
       if(textInputVal != ""){
